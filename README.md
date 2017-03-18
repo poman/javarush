@@ -1,0 +1,2 @@
+# javarush
+Just JavaRush tasks
