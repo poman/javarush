@@ -1,0 +1,11 @@
+# Ignore paths that contain user-generated content.
+
+
+#Ignore PC project files
+######################
+/.idea
+.idea/**/*
+/out
+/out/*
+JavaRushPlugin.properties
+JavaRushTasks.iml
