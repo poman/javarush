@@ -5,12 +5,12 @@ KissMyShinyMetalAss
 */
 
 public class Solution {
-    public static class ??? {
+    public static class KissMyShinyMetalAss {
 
     }
 
     public static void main(String[] args) {
-        //напишите тут ваш код
-        System.out.println(???);
+        KissMyShinyMetalAss kissMyShinyMetalAss = new KissMyShinyMetalAss();
+        System.out.println(kissMyShinyMetalAss);
     }
 }
