@@ -14,6 +14,7 @@ public class Solution {
 
         ArrayList<String> list = new ArrayList<String>();
         list.add("роза"); //0
+
         list.add("лоза"); //1
         list.add("лира"); //2
         list.add("лоза");
