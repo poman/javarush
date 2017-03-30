@@ -26,37 +26,28 @@ public class Solution {
     }
 
     public static void insert10000(List list) {
-        for (int i = 0; i < 10001; i++) {
+        for (int i = 0; i < 10000; i++) {
             list.add(i, i);
         }
-        //System.out.println(list.size());
-
 
     }
 
     public static void get10000(List list) {
-        for (int i = 0; i < list.size(); i++) {
-            list.get(i);
+        for (int i = 0; i < 10000; i++) {
+            Object s = list.get(i);
         }
-        //System.out.println(list.size());
-
 
     }
 
     public static void set10000(List list) {
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < 10000; i++) {
             list.set(i, "new");
         }
-        //System.out.println(list.size());
-
 
     }
 
     public static void remove10000(List list) {
-        for (int i = list.size()-1; i >= 0 ; i--) {
-            list.remove(i);
-        }
-        System.out.println(list.size());
+        list.removeAll(list);
 
     }
 }
