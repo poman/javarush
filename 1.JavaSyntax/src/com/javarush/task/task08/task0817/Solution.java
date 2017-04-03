@@ -25,13 +25,16 @@ public class Solution {
     }
 
     public static void removeTheFirstNameDuplicates(HashMap<String, String> map) {
-        for (Map.Entry<String, String> pair : map.entrySet()) {
+        HashMap<String, String> mapCopy = new HashMap<String, String>(map);
+        for (Map.Entry<String, String> pair : mapCopy.entrySet()) {
             String currentName = pair.getValue();
-            for (Map.Entry<String, String> pairNew : map.entrySet()) {
-                if(pairNew.getValue().equals(currentName))
+            for (Map.Entry<String, String> pairNew : mapCopy.entrySet()) {
+                if(!pairNew.getKey().equals(pair.getKey()) &&  pairNew.getValue().equals(currentName)) {
+                    map.remove(pair.getKey());
                     removeItemFromMapByValue(map, pair.getValue());
+                    //map.put(pairNew.getKey(), pairNew.getValue());
+                }
             }
-
         }
 
     }
@@ -45,6 +48,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
+       /* HashMap<String, String> map = createMap();
+        System.out.println(map);
+        removeTheFirstNameDuplicates(map);
+        System.out.println(map);*/
     }
 }
