@@ -12,16 +12,15 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if((i == 0) || (chars[i-1] == ' ' &&  chars[i] != ' '))
+            {
+                chars[i] = Character.toUpperCase(chars[i]);
+            }
+        }
 
-        String[] newList = s.split(" ");
-        for (int i = 0; i < newList.length; i++) {
-            newList[i] = newList[i].substring(0, 1).toUpperCase() + newList[i].substring(1);
-        }
-        for (int i = 0; i < newList.length; i++) {
-            if(i == newList.length-1)
-                System.out.print(newList[i]);
-            else
-                System.out.print(newList[i] + " ");
-        }
+        s = new String(chars);
+        System.out.println(s);
     }
 }
